@@ -194,7 +194,7 @@
 
     const drawRow = (labels, keys) => {
       const colWidth = usableWidth / labels.length;
-      const rowHeight = 30;
+      const rowHeight = 20;
       if (y + rowHeight > pdf.internal.pageSize.getHeight() - margin) {
         pdf.addPage(); y = margin;
       }
