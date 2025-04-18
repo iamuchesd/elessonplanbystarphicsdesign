@@ -7,70 +7,84 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
+ 
   <div class="max-w-5xl mx-auto p-6">
-    <h1 class="text-3xl font-bold text-center text-blue-700 mb-2">E‑LessonPlan Tool</h1>
+    <h1 class="text-3xl font-bold text-center text-blue-700 mb-2">E-LessonPlan Tool</h1>
     <p class="text-center text-black text-sm mb-6">by StarphicsDesign</p>
     <p class="text-base text-gray-600 max-w-xl mb-8 text-center mx-auto">
       Please complete the lesson plan form by filling in all required fields accurately. Enter your information in each space, then review and submit.
     </p>
-
     <form id="lessonForm" class="space-y-4">
-      <!-- General Information -->
-      <h2 class="text-xl font-bold mt-8 mb-2 text-blue-700">General Information</h2>
+    <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">General Information</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div><label>Week *</label><input name="Week" class="form-input p-2 border rounded w-full" required></div>
-        <div><label>Date *</label><input name="Date" type="date" class="form-input p-2 border rounded w-full" required></div>
-        <div><label>Class *</label><input name="Class" class="form-input p-2 border rounded w-full" required></div>
-      </div>
+        <div>
+          <label class="block text-sm font-medium">Week <span class="text-red-500">*</span></label>
+          <input name="Week" placeholder="One, Two, Three..." class="form-input p-2 border rounded w-full" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Date <span class="text-red-500">*</span></label>
+          <input name="Date" type="date" class="form-input p-2 border rounded w-full" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Class <span class="text-red-500">*</span></label>
+          <input name="Class" class="form-input p-2 border rounded w-full" required>
+        </div>
+     
+     <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Details</h2>
+      </div><div class="grid grid-cols-1">
+    <div>
+      <label class="block text-sm font-medium">Subject <span class="text-red-500">*</span></label>
+      <input name="Subject" class="form-input p-2 border rounded w-full" required>
+    </div>
+    <div>
+      <label class="block text-sm font-medium">Topic <span class="text-red-500">*</span></label>
+      <input name="Topic" class="form-input p-2 border rounded w-full" required>
+    </div>
+    <div>
+      <label class="block text-sm font-medium">Sub-topic <span class="text-red-500">*</span></label>
+      <input name="Sub-topic" class="form-input p-2 border rounded w-full" required>
+    </div>
+  </div>
 
-      <!-- Lesson Details -->
-      <hr class="my-6" />
-      <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Details</h2>
-      <div class="space-y-4">
-        <div><label>Subject *</label><input name="Subject" class="form-input p-2 border rounded w-full" required></div>
-        <div><label>Topic *</label><input name="Topic" class="form-input p-2 border rounded w-full" required></div>
-        <div><label>Sub-topic *</label><input name="Sub-topic" class="form-input p-2 border rounded w-full" required></div>
-      </div>
+  <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Schedule</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div>
+      <label class="block text-sm font-medium">Time <span class="text-red-500">*</span></label>
+      <input name="Time" placeholder="07:30 AM" class="form-input p-2 border rounded w-full" required>
+    </div>
+    <div>
+      <label class="block text-sm font-medium">Period <span class="text-red-500">*</span></label>
+      <input name="Period" placeholder="1st, 2nd, 3rd..." class="form-input p-2 border rounded w-full" required>
+    </div>
+    <div>
+      <label class="block text-sm font-medium">Duration <span class="text-red-500">*</span></label>
+      <input name="Duration" placeholder="40 minutes" class="form-input p-2 border rounded w-full" required>
+    </div>
+  </div>
 
-      <!-- Schedule -->
-      <hr class="my-6" />
-      <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Schedule</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div><label>Time *</label><input name="Time" class="form-input p-2 border rounded w-full" required></div>
-        <div><label>Period *</label><input name="Period" class="form-input p-2 border rounded w-full" required></div>
-        <div><label>Duration *</label><input name="Duration" class="form-input p-2 border rounded w-full" required></div>
-      </div>
+  <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Class Demographics</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div><label class="block text-sm font-medium">Gender<span class="text-red-500">*</span></label><input name="Gender" placeholder="Male / Female / Mixed" class="form-input p-2 border rounded w-full" required></div>
+    <div><label class="block text-sm font-medium">Average Age<span class="text-red-500">*</span></label><input name="Average Age" placeholder="11 years" class="form-input p-2 border rounded w-full" required></div>
+    <div><label class="block text-sm font-medium">Number in Class<span class="text-red-500">*</span></label><input name="Number in Class" placeholder="1, 2, 3..." class="form-input p-2 border rounded w-full" required></div>
+  </div>
 
-      <!-- Demographics -->
-      <hr class="my-6" />
-      <h2 class="text-xl font-bold mb-2 text-blue-700">Class Demographics</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div><label>Gender *</label><input name="Gender" class="form-input p-2 border rounded w-full" required></div>
-        <div><label>Average Age *</label><input name="Average Age" class="form-input p-2 border rounded w-full" required></div>
-        <div><label>Number in Class *</label><input name="Number in Class" class="form-input p-2 border rounded w-full" required></div>
-      </div>
+<h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Components</h2>
+  <div><label class="block text-sm font-medium">Learning Objectives <span class="text-red-500">*</span></label><textarea name="Learning Objectives" class="form-textarea w-full p-2 border rounded resize-y" required>By the end of the lesson, the learners/students should be able to:</textarea></div>
+  <div><label class="block text-sm font-medium">Previous Knowledge <span class="text-red-500">*</span></label><textarea name="Previous Knowledge" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+  <div><label class="block text-sm font-medium">Rationale <span class="text-red-500">*</span></label><textarea name="Rationale" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+  <div><label class="block text-sm font-medium">Aids to Teaching <span class="text-red-500">*</span></label><textarea name="Aids to Teaching" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+  <div><label class="block text-sm font-medium">Reference <span class="text-red-500">*</span></label><textarea name="Reference" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
 
-      <!-- Components -->
-      <hr class="my-6" />
-      <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Components</h2>
-      <div class="space-y-4">
-        <div><label>Learning Objectives *</label><textarea name="Learning Objectives" class="form-textarea w-full p-2 border rounded resize-y" required>By the end of the lesson, the learners/students should be able to:</textarea></div>
-        <div><label>Previous Knowledge *</label><textarea name="Previous Knowledge" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
-        <div><label>Rationale *</label><textarea name="Rationale" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
-        <div><label>Aids to Teaching *</label><textarea name="Aids to Teaching" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
-        <div><label>Reference *</label><textarea name="Reference" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
-      </div>
+  <div>
+    <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Development</h2>
+    <h3 class="text-xl font-semibold mb-2">Lesson Development Stages</h3>
+    <div id="stages" class="space-y-6"></div>
+  </div>
 
-      <!-- Development -->
-      <hr class="my-6" />
-      <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Development</h2>
-      <div id="stages" class="space-y-6"></div>
-
-      <!-- Assignment -->
-      <hr class="my-6" />
-      <h2 class="text-xl font-bold mb-2 text-blue-700">Assignment</h2>
-      <div><label>Assignment *</label><textarea name="Assignment" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
-
+  <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Assignment</h2>
+  <div><label class="block text-sm font-medium">Assignment <span class="text-red-500">*</span></label><textarea name="Assignment" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+      
       <!-- Generate Button -->
       <button id="generateBtn" type="button"
               class="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded shadow w-full"
