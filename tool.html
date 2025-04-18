@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,58 +11,140 @@
   <div class="max-w-5xl mx-auto p-6">
     <h1 class="text-3xl font-bold text-center text-blue-700 mb-2">E-LessonPlan Tool</h1>
     <p class="text-center text-black text-sm mb-6">by StarphicsDesign</p>
+    <p class="text-base text-gray-600 max-w-xl mb-8 text-center mx-auto">
+      Please complete the lesson plan form by filling in all required fields accurately. Enter your information in each space, then review and submit.
+    </p>
     <form id="lessonForm" class="space-y-4">
-      <!-- Inputs omitted here for brevity, assuming existing form stays -->
-      <!-- Generate PDF Button -->
+
+      <!-- General Information -->
+      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">General Information</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Week <span class="text-red-500">*</span></label>
+          <input name="Week" placeholder="One, Two, Three..." class="form-input p-2 border rounded w-full" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Date <span class="text-red-500">*</span></label>
+          <input name="Date" type="date" class="form-input p-2 border rounded w-full" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Class <span class="text-red-500">*</span></label>
+          <input name="Class" class="form-input p-2 border rounded w-full" required>
+        </div>
+      </div>
+
+      <!-- Lesson Details -->
+      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Details</h2>
+      <div class="grid grid-cols-1">
+        <div>
+          <label class="block text-sm font-medium">Subject <span class="text-red-500">*</span></label>
+          <input name="Subject" class="form-input p-2 border rounded w-full" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Topic <span class="text-red-500">*</span></label>
+          <input name="Topic" class="form-input p-2 border rounded w-full" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Sub-topic <span class="text-red-500">*</span></label>
+          <input name="Sub-topic" class="form-input p-2 border rounded w-full" required>
+        </div>
+      </div>
+
+      <!-- Lesson Schedule -->
+      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Schedule</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Time <span class="text-red-500">*</span></label>
+          <input name="Time" placeholder="07:30 AM" class="form-input p-2 border rounded w-full" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Period <span class="text-red-500">*</span></label>
+          <input name="Period" placeholder="1st, 2nd, 3rd..." class="form-input p-2 border rounded w-full" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Duration <span class="text-red-500">*</span></label>
+          <input name="Duration" placeholder="40 minutes" class="form-input p-2 border rounded w-full" required>
+        </div>
+      </div>
+
+      <!-- Class Demographics -->
+      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Class Demographics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div><label class="block text-sm font-medium">Gender <span class="text-red-500">*</span></label><input name="Gender" placeholder="Male / Female / Mixed" class="form-input p-2 border rounded w-full" required></div>
+        <div><label class="block text-sm font-medium">Average Age <span class="text-red-500">*</span></label><input name="Average Age" placeholder="11 years" class="form-input p-2 border rounded w-full" required></div>
+        <div><label class="block text-sm font-medium">Number in Class <span class="text-red-500">*</span></label><input name="Number in Class" placeholder="30" class="form-input p-2 border rounded w-full" required></div>
+      </div>
+
+      <!-- Lesson Components -->
+      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Components</h2>
+      <div><label class="block text-sm font-medium">Learning Objectives <span class="text-red-500">*</span></label><textarea name="Learning Objectives" class="form-textarea w-full p-2 border rounded resize-y" required>By the end of the lesson, the learners/students should be able to:</textarea></div>
+      <div><label class="block text-sm font-medium">Previous Knowledge <span class="text-red-500">*</span></label><textarea name="Previous Knowledge" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+      <div><label class="block text-sm font-medium">Rationale <span class="text-red-500">*</span></label><textarea name="Rationale" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+      <div><label class="block text-sm font-medium">Aids to Teaching <span class="text-red-500">*</span></label><textarea name="Aids to Teaching" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+      <div><label class="block text-sm font-medium">Reference <span class="text-red-500">*</span></label><textarea name="Reference" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+
+      <!-- Lesson Development -->
+      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Development</h2>
+      <div id="stages" class="space-y-6"></div>
+
+      <!-- Assignment -->
+      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Assignment</h2>
+      <div><label class="block text-sm font-medium">Assignment <span class="text-red-500">*</span></label><textarea name="Assignment" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+
+      <!-- Button -->
       <button type="button" onclick="generatePDF()" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded shadow">
         Generate PDF
       </button>
     </form>
-  </div>  <!-- Footer -->  <footer class="bg-blue-50 text-gray-700 py-6 px-4 mt-10 text-center border-t">
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-blue-50 text-gray-700 py-6 px-4 mt-10 text-center border-t">
     <p>Created by <strong>StarphicsDesign</strong></p>
-    <p class="text-sm mt-1">
-      Email: <a href="mailto:starphicsdesign@yahoo.com" class="text-blue-600 hover:underline">starphicsdesign@yahoo.com</a>
-    </p>
-    <p class="text-sm mt-1">
-      WhatsApp: <a href="https://wa.me/2348071061097" target="_blank" class="text-green-600 hover:underline">+2348071061097</a>
-    </p>
-  </footer>  <!-- Hidden PDF Content -->  <div id="pdf-content" class="invisible absolute top-0 left-0 px-10 py-6 text-black w-full">
+    <p class="text-sm mt-1">Email: <a href="mailto:starphicsdesign@yahoo.com" class="text-blue-600 hover:underline">starphicsdesign@yahoo.com</a></p>
+    <p class="text-sm mt-1">WhatsApp: <a href="https://wa.me/2348071061097" target="_blank" class="text-green-600 hover:underline">+2348071061097</a></p>
+  </footer>
+
+  <!-- PDF Template -->
+  <div id="pdf-content" class="invisible absolute top-0 left-0 px-10 py-6 text-black w-full">
     <div class="text-center mb-6">
       <h1 class="text-2xl font-bold">E-LessonPlan Tool</h1>
       <p class="text-sm">by StarphicsDesign</p>
     </div>
-    <div class="space-y-2 text-sm leading-6">
-      <p><strong>Week:</strong> <span id="out-Week"></span></p>
-      <p><strong>Date:</strong> <span id="out-Date"></span></p>
-      <p><strong>Class:</strong> <span id="out-Class"></span></p>
-      <p><strong>Subject:</strong> <span id="out-Subject"></span></p>
-      <p><strong>Topic:</strong> <span id="out-Topic"></span></p>
-      <p><strong>Sub-topic:</strong> <span id="out-Sub-topic"></span></p>
-      <p><strong>Time:</strong> <span id="out-Time"></span></p>
-      <p><strong>Period:</strong> <span id="out-Period"></span></p>
-      <p><strong>Duration:</strong> <span id="out-Duration"></span></p>
-      <p><strong>Gender:</strong> <span id="out-Gender"></span></p>
-      <p><strong>Average Age:</strong> <span id="out-AverageAge"></span></p>
-      <p><strong>Number in Class:</strong> <span id="out-NumberinClass"></span></p>
-      <p><strong>Learning Objectives:</strong></p>
-      <p id="out-LearningObjectives" class="whitespace-pre-line"></p>
-      <p><strong>Previous Knowledge:</strong></p>
-      <p id="out-PreviousKnowledge" class="whitespace-pre-line"></p>
-      <p><strong>Rationale:</strong></p>
-      <p id="out-Rationale" class="whitespace-pre-line"></p>
-      <p><strong>Aids to Teaching:</strong></p>
-      <p id="out-AidstoTeaching" class="whitespace-pre-line"></p>
-      <p><strong>Reference:</strong></p>
-      <p id="out-Reference" class="whitespace-pre-line"></p>
-      <h2 class="text-base font-bold mt-4 mb-2">Lesson Development</h2>
-      <div id="out-LessonDevelopment" class="space-y-4"></div>
-      <p class="mt-4"><strong>Assignment:</strong></p>
-      <p id="out-Assignment" class="whitespace-pre-line"></p>
-    </div>
-    <div class="text-right text-xs pt-6">
-      Page <span class="pageNumber"></span> of <span class="totalPages"></span>
-    </div>
-  </div>  <script>
+    <div id="pdf-body" class="space-y-2 text-sm leading-6"></div>
+    <div class="text-right text-xs pt-6">Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const stages = ["Introduction", "Step 1", "Step 2", "Step 3", "Step 4", "Evaluation", "Conclusion"];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("stages");
+      stages.forEach(stage => {
+        const isOptional = stage === "Step 4";
+        container.innerHTML += `
+          <div class="border p-4 rounded bg-white shadow">
+            <h3 class="font-semibold mb-2 text-blue-600">${stage}</h3>
+            <div>
+              <label class="block text-sm font-medium">Teacher's Activity ${!isOptional ? '<span class="text-red-500">*</span>' : ''}</label>
+              <textarea name="${stage} Teacher" class="form-textarea w-full p-2 border rounded resize-y" ${!isOptional ? 'required' : ''}></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Students' Activity ${!isOptional ? '<span class="text-red-500">*</span>' : ''}</label>
+              <textarea name="${stage} Student" class="form-textarea w-full p-2 border rounded resize-y" ${!isOptional ? 'required' : ''}></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Learning Point ${!isOptional ? '<span class="text-red-500">*</span>' : ''}</label>
+              <textarea name="${stage} Point" class="form-textarea w-full p-2 border rounded resize-y" ${!isOptional ? 'required' : ''}></textarea>
+            </div>
+          </div>
+        `;
+      });
+
+      loadFormFromStorage();
+    });
+
     function generatePDF() {
       const form = document.getElementById('lessonForm');
       if (!form.checkValidity()) {
@@ -71,43 +154,19 @@
       }
 
       const formData = new FormData(form);
+      saveFormToStorage(formData);
 
-      // Map simple fields
-      const mapFields = [
-        'Week', 'Date', 'Class', 'Subject', 'Topic', 'Sub-topic', 'Time', 'Period', 'Duration',
-        'Gender', 'Average Age', 'Number in Class',
-        'Learning Objectives', 'Previous Knowledge', 'Rationale', 'Aids to Teaching', 'Reference', 'Assignment'
-      ];
+      let content = '';
+      for (const [key, value] of formData.entries()) {
+        if (value.trim()) {
+          content += `<p><strong>${key}:</strong> ${value}</p>`;
+        }
+      }
 
-      mapFields.forEach(key => {
-        const id = 'out-' + key.replace(/\s+/g, '').replace(/[^a-zA-Z0-9\-_]/g, '');
-        const el = document.getElementById(id);
-        if (el) el.textContent = formData.get(key) || '';
-      });
-
-      // Lesson Development
-      const stages = ["Introduction", "Step 1", "Step 2", "Step 3", "Step 4", "Evaluation", "Conclusion"];
-      const devContainer = document.getElementById("out-LessonDevelopment");
-      devContainer.innerHTML = "";
-      stages.forEach(stage => {
-        const teacher = formData.get(`${stage} Teacher`) || "";
-        const student = formData.get(`${stage} Student`) || "";
-        const point = formData.get(`${stage} Point`) || "";
-
-        devContainer.innerHTML += `
-          <div>
-            <h3 class="font-semibold text-blue-700 mb-1">${stage}</h3>
-            <p><strong>Teacher's Activity:</strong> ${teacher}</p>
-            <p><strong>Student's Activity:</strong> ${student}</p>
-            <p><strong>Learning Point:</strong> ${point}</p>
-          </div>
-        `;
-      });
-
+      document.getElementById('pdf-body').innerHTML = content;
       const pdfArea = document.getElementById("pdf-content");
       const opt = {
         margin: 0.5,
-        filename: `E-LessonPlan_${Date.now()}.pdf`,
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2 },
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
@@ -118,5 +177,24 @@
         window.location.href = "success.html";
       });
     }
-  </script></body>
+
+    function saveFormToStorage(formData) {
+      const entries = {};
+      for (const [key, value] of formData.entries()) {
+        entries[key] = value;
+      }
+      localStorage.setItem('lessonPlanData', JSON.stringify(entries));
+    }
+
+    function loadFormFromStorage() {
+      const savedData = localStorage.getItem('lessonPlanData');
+      if (!savedData) return;
+      const data = JSON.parse(savedData);
+      for (const key in data) {
+        const input = document.querySelector(`[name="${key}"]`);
+        if (input) input.value = data[key];
+      }
+    }
+  </script>
+</body>
 </html>
