@@ -10,7 +10,7 @@
   <div class="max-w-5xl mx-auto p-6">
     <h1 class="text-3xl font-bold text-center text-blue-700 mb-2">E‑LessonPlan Tool</h1>
     <p class="text-center text-black text-sm mb-6">by StarphicsDesign</p>
-    <p class="text-base text-gray-600 max-w-xl mb-8 text-center">
+    <p class="text-base text-gray-600 max-w-xl mb-8 text-center mx-auto">
       Please complete the lesson plan form by filling in all required fields accurately. Enter your information in each space, then review and submit.
     </p>
 
@@ -18,18 +18,9 @@
       <!-- General Information -->
       <h2 class="text-xl font-bold mt-8 mb-2 text-blue-700">General Information</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-          <label>Week *</label>
-          <input name="Week" class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label>Date *</label>
-          <input name="Date" type="date" class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label>Class *</label>
-          <input name="Class" class="form-input p-2 border rounded w-full" required>
-        </div>
+        <div><label>Week *</label><input name="Week" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Date *</label><input name="Date" type="date" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Class *</label><input name="Class" class="form-input p-2 border rounded w-full" required></div>
       </div>
 
       <!-- Lesson Details -->
@@ -41,7 +32,7 @@
         <div><label>Sub-topic *</label><input name="Sub-topic" class="form-input p-2 border rounded w-full" required></div>
       </div>
 
-      <!-- Lesson Schedule -->
+      <!-- Schedule -->
       <hr class="my-6" />
       <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Schedule</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -50,7 +41,7 @@
         <div><label>Duration *</label><input name="Duration" class="form-input p-2 border rounded w-full" required></div>
       </div>
 
-      <!-- Class Demographics -->
+      <!-- Demographics -->
       <hr class="my-6" />
       <h2 class="text-xl font-bold mb-2 text-blue-700">Class Demographics</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -59,18 +50,18 @@
         <div><label>Number in Class *</label><input name="Number in Class" class="form-input p-2 border rounded w-full" required></div>
       </div>
 
-      <!-- Lesson Components -->
+      <!-- Components -->
       <hr class="my-6" />
       <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Components</h2>
       <div class="space-y-4">
-        <textarea name="Learning Objectives" class="form-textarea w-full p-2 border rounded resize-y" required>By the end of the lesson, the learners/students should be able to:</textarea>
-        <textarea name="Previous Knowledge" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
-        <textarea name="Rationale" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
-        <textarea name="Aids to Teaching" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
-        <textarea name="Reference" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
+        <div><label>Learning Objectives *</label><textarea name="Learning Objectives" class="form-textarea w-full p-2 border rounded resize-y" required>By the end of the lesson, the learners/students should be able to:</textarea></div>
+        <div><label>Previous Knowledge *</label><textarea name="Previous Knowledge" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+        <div><label>Rationale *</label><textarea name="Rationale" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+        <div><label>Aids to Teaching *</label><textarea name="Aids to Teaching" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+        <div><label>Reference *</label><textarea name="Reference" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
       </div>
 
-      <!-- Lesson Development -->
+      <!-- Development -->
       <hr class="my-6" />
       <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Development</h2>
       <div id="stages" class="space-y-6"></div>
@@ -78,7 +69,7 @@
       <!-- Assignment -->
       <hr class="my-6" />
       <h2 class="text-xl font-bold mb-2 text-blue-700">Assignment</h2>
-      <textarea name="Assignment" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
+      <div><label>Assignment *</label><textarea name="Assignment" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
 
       <!-- Generate Button -->
       <button id="generateBtn" type="button"
