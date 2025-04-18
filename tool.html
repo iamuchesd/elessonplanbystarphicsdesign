@@ -35,7 +35,7 @@
 
       <!-- Lesson Details -->
       <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Details</h2>
-      <div class="grid grid-cols-1">
+      <div class="grid grid-cols-1 gap-4">
         <div>
           <label class="block text-sm font-medium">Subject <span class="text-red-500">*</span></label>
           <input name="Subject" class="form-input p-2 border rounded w-full" required>
@@ -145,34 +145,41 @@
       loadFormFromStorage();
     });
 
-    function generatePDF() {
-      const form = document.getElementById('lessonForm');
-      if (!form.checkValidity()) {
-        alert("Please fill out all required fields.");
-        form.reportValidity();
-        return;
-      }
 
-      const formData = new FormData(form);
-      saveFormToStorage(formData);
+function generatePDF() {
+  const form = document.getElementById('lessonForm');
+  if (!form.checkValidity()) {
+    alert("Please fill out all required fields.");
+    form.reportValidity();
+    return;
+  }
 
-      let content = '';
-      for (const [key, value] of formData.entries()) {
-        if (value.trim()) {
-          content += `<p><strong>${key}:</strong> ${value}</p>`;
-        }
-      }
+  const formData = new FormData(form);
+  saveFormToStorage(formData);
 
-      document.getElementById('pdf-body').innerHTML = content;
-      const pdfArea = document.getElementById("pdf-content");
-      const opt = {
-        margin: 0.5,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-      };
+  let body = '';
+  for (const [key, value] of formData.entries()) {
+    if (value.trim()) {
+      body += `<div class="mb-1"><strong>${key}:</strong> ${value.replace(/\n/g, '<br>')}</div>`;
+    }
+  }
 
+  document.getElementById('pdf-body').innerHTML = body;
+
+  const pdfArea = document.getElementById("pdf-content");
+  const opt = {
+    margin: 0.5,
+    filename: `E-LessonPlan_${Date.now()}.pdf`,
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+  };
+
+  html2pdf().from(pdfArea).set(opt).save().then(() => {
+    window.location.href = "success.html";
+  });
+}
       html2pdf().from(pdfArea).set(opt).save().then(() => {
         window.location.href = "success.html";
       });
