@@ -18,109 +18,63 @@
 
     <form id="lessonForm" class="space-y-4">
       <!-- General Information -->
-      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">General Information</h2>
+      <h2 class="text-xl font-bold mt-8 mb-2 text-blue-700">General Information</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-          <label class="block text-sm font-medium">Week <span class="text-red-500">*</span></label>
-          <input name="Week" placeholder="One, Two, Three..." class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Date <span class="text-red-500">*</span></label>
-          <input name="Date" type="date" class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Class <span class="text-red-500">*</span></label>
-          <input name="Class" class="form-input p-2 border rounded w-full" required>
-        </div>
+        <div><label>Week *</label><input name="Week" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Date *</label><input name="Date" type="date" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Class *</label><input name="Class" class="form-input p-2 border rounded w-full" required></div>
       </div>
 
       <!-- Lesson Details -->
-      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Details</h2>
-      <div class="grid grid-cols-1 gap-4">
-        <div>
-          <label class="block text-sm font-medium">Subject <span class="text-red-500">*</span></label>
-          <input name="Subject" class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Topic <span class="text-red-500">*</span></label>
-          <input name="Topic" class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Sub-topic <span class="text-red-500">*</span></label>
-          <input name="Sub-topic" class="form-input p-2 border rounded w-full" required>
-        </div>
+      <hr class="my-6" />
+      <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Details</h2>
+      <div class="space-y-4">
+        <div><label>Subject *</label><input name="Subject" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Topic *</label><input name="Topic" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Sub-topic *</label><input name="Sub-topic" class="form-input p-2 border rounded w-full" required></div>
       </div>
 
-      <!-- Lesson Schedule -->
-      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Schedule</h2>
+      <!-- Schedule -->
+      <hr class="my-6" />
+      <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Schedule</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-          <label class="block text-sm font-medium">Time <span class="text-red-500">*</span></label>
-          <input name="Time" placeholder="07:30 AM" class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Period <span class="text-red-500">*</span></label>
-          <input name="Period" placeholder="1st, 2nd, 3rd..." class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Duration <span class="text-red-500">*</span></label>
-          <input name="Duration" placeholder="40 minutes" class="form-input p-2 border rounded w-full" required>
-        </div>
+        <div><label>Time *</label><input name="Time" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Period *</label><input name="Period" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Duration *</label><input name="Duration" class="form-input p-2 border rounded w-full" required></div>
       </div>
 
-      <!-- Class Demographics -->
-      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Class Demographics</h2>
+      <!-- Demographics -->
+      <hr class="my-6" />
+      <h2 class="text-xl font-bold mb-2 text-blue-700">Class Demographics</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-          <label class="block text-sm font-medium">Gender <span class="text-red-500">*</span></label>
-          <input name="Gender" placeholder="Male / Female / Mixed" class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Average Age <span class="text-red-500">*</span></label>
-          <input name="Average Age" placeholder="11 years" class="form-input p-2 border rounded w-full" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Number in Class <span class="text-red-500">*</span></label>
-          <input name="Number in Class" placeholder="30" class="form-input p-2 border rounded w-full" required>
-        </div>
+        <div><label>Gender *</label><input name="Gender" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Average Age *</label><input name="Average Age" class="form-input p-2 border rounded w-full" required></div>
+        <div><label>Number in Class *</label><input name="Number in Class" class="form-input p-2 border rounded w-full" required></div>
       </div>
 
-      <!-- Lesson Components -->
-      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Components</h2>
-      <div>
-        <label class="block text-sm font-medium">Learning Objectives <span class="text-red-500">*</span></label>
-        <textarea name="Learning Objectives" class="form-textarea w-full p-2 border rounded resize-y" required>By the end of the lesson, the learners/students should be able to:</textarea>
-      </div>
-      <div>
-        <label class="block text-sm font-medium">Previous Knowledge <span class="text-red-500">*</span></label>
-        <textarea name="Previous Knowledge" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
-      </div>
-      <div>
-        <label class="block text-sm font-medium">Rationale <span class="text-red-500">*</span></label>
-        <textarea name="Rationale" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
-      </div>
-      <div>
-        <label class="block text-sm font-medium">Aids to Teaching <span class="text-red-500">*</span></label>
-        <textarea name="Aids to Teaching" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
-      </div>
-      <div>
-        <label class="block text-sm font-medium">Reference <span class="text-red-500">*</span></label>
-        <textarea name="Reference" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
+      <!-- Components -->
+      <hr class="my-6" />
+      <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Components</h2>
+      <div class="space-y-4">
+        <div><label>Learning Objectives *</label><textarea name="Learning Objectives" class="form-textarea w-full p-2 border rounded resize-y" required>By the end of the lesson, the learners/students should be able to:</textarea></div>
+        <div><label>Previous Knowledge *</label><textarea name="Previous Knowledge" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+        <div><label>Rationale *</label><textarea name="Rationale" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+        <div><label>Aids to Teaching *</label><textarea name="Aids to Teaching" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
+        <div><label>Reference *</label><textarea name="Reference" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
       </div>
 
-      <!-- Lesson Development -->
-      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Lesson Development</h2>
+      <!-- Development -->
+      <hr class="my-6" />
+      <h2 class="text-xl font-bold mb-2 text-blue-700">Lesson Development</h2>
       <div id="stages" class="space-y-6"></div>
 
       <!-- Assignment -->
-      <h2 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Assignment</h2>
-      <div>
-        <label class="block text-sm font-medium">Assignment <span class="text-red-500">*</span></label>
-        <textarea name="Assignment" class="form-textarea w-full p-2 border rounded resize-y" required></textarea>
-      </div>
+      <hr class="my-6" />
+      <h2 class="text-xl font-bold mb-2 text-blue-700">Assignment</h2>
+      <div><label>Assignment *</label><textarea name="Assignment" class="form-textarea w-full p-2 border rounded resize-y" required></textarea></div>
 
-      <!-- Generate Button -->
-      <button type="button" onclick="generatePDF()" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded shadow">
+      <button id="generateBtn" type="button" onclick="generatePDF()"
+              class="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded shadow w-full">
         Generate PDF
       </button>
     </form>
@@ -146,97 +100,118 @@
         container.innerHTML += `
           <div class="border p-4 rounded bg-white shadow">
             <h3 class="font-semibold mb-2 text-blue-600">${stage}</h3>
-            <div>
-              <label class="block text-sm font-medium">Teacher's Activity ${!isOpt?'<span class="text-red-500">*</span>':''}</label>
-              <textarea name="${stage} Teacher" class="form-textarea w-full p-2 border rounded resize-y" ${!isOpt?'required':''}></textarea>
-            </div>
-            <div>
-              <label class="block text-sm font-medium">Students' Activity ${!isOpt?'<span class="text-red-500">*</span>':''}</label>
-              <textarea name="${stage} Student" class="form-textarea w-full p-2 border rounded resize-y" ${!isOpt?'required':''}></textarea>
-            </div>
-            <div>
-              <label class="block text-sm font-medium">Learning Point ${!isOpt?'<span class="text-red-500">*</span>':''}</label>
-              <textarea name="${stage} Point" class="form-textarea w-full p-2 border rounded resize-y" ${!isOpt?'required':''}></textarea>
-            </div>
+            <div><label class="block text-sm font-medium">Teacher's Activity ${!isOpt?'<span class="text-red-500">*</span>':''}</label>
+              <textarea name="${stage} Teacher" class="form-textarea w-full p-2 border rounded resize-y" ${!isOpt?'required':''}></textarea></div>
+            <div><label class="block text-sm font-medium">Students' Activity ${!isOpt?'<span class="text-red-500">*</span>':''}</label>
+              <textarea name="${stage} Student" class="form-textarea w-full p-2 border rounded resize-y" ${!isOpt?'required':''}></textarea></div>
+            <div><label class="block text-sm font-medium">Learning Point ${!isOpt?'<span class="text-red-500">*</span>':''}</label>
+              <textarea name="${stage} Point" class="form-textarea w-full p-2 border rounded resize-y" ${!isOpt?'required':''}></textarea></div>
           </div>`;
       });
-      loadFormFromStorage();
+      const saved = localStorage.getItem('lessonPlanData');
+      if (saved) {
+        const data = JSON.parse(saved);
+        for (const k in data) {
+          const el = document.querySelector(`[name="${k}"]`);
+          if (el) el.value = data[k];
+        }
+      }
     });
 
     async function generatePDF() {
+      const btn = document.getElementById('generateBtn');
+      btn.disabled = true;
+      btn.textContent = 'Generating…';
+
       const { jsPDF } = window.jspdf;
       const form = document.getElementById('lessonForm');
       if (!form.checkValidity()) {
         alert("Please fill out all required fields.");
         form.reportValidity();
+        btn.disabled = false;
+        btn.textContent = 'Generate PDF';
         return;
       }
+
       const fd = new FormData(form), data = {};
       for (const [k,v] of fd.entries()) data[k] = v;
       localStorage.setItem('lessonPlanData', JSON.stringify(data));
 
-      const pdf = new jsPDF({ unit:'pt', format:'a4' }),
-            margin = 40;
-      let y = margin;
+      const pdf = new jsPDF({ unit:'pt', format:'a4' }), margin = 40;
+      let y = margin, w = pdf.internal.pageSize.getWidth() - 2*margin;
 
+      // Header
       pdf.setFontSize(18).text("E‑LessonPlan Tool", pdf.internal.pageSize.getWidth()/2, y, { align:"center" });
-      y+=25;
+      y += 25;
       pdf.setFontSize(10).text("by StarphicsDesign", pdf.internal.pageSize.getWidth()/2, y, { align:"center" });
-      y+=30; pdf.setFontSize(12);
+      y += 30;
 
-      const printKV = (label,key) => {
-        pdf.text(`${label}: ${data[key]||""}`, margin, y);
-        y+=18;
-        if (y>pdf.internal.pageSize.getHeight()-margin){ pdf.addPage(); y=margin; }
-      };
+      pdf.setFontSize(12);
+      // Simple fields
       ["Week","Date","Class","Subject","Topic","Sub-topic","Time","Period","Duration",
-       "Gender","Average Age","Number in Class"].forEach(k => printKV(k,k));
-
-      const printBlock = (label,key) => {
-        pdf.text(`${label}:`, margin, y); y+=16;
-        pdf.setFontSize(10);
-        const lines = pdf.splitTextToSize(data[key]||"", pdf.internal.pageSize.getWidth()-2*margin);
-        pdf.text(lines, margin+10, y);
-        y += lines.length*14 + 10;
-        pdf.setFontSize(12);
-        if (y>pdf.internal.pageSize.getHeight()-margin){ pdf.addPage(); y=margin; }
-      };
-      ["Learning Objectives","Previous Knowledge","Rationale","Aids to Teaching","Reference"].forEach(k => printBlock(k,k));
-
-      pdf.setFontSize(14).text("Lesson Development", margin, y); y+=20; pdf.setFontSize(12);
-      stages.forEach(stage => {
-        pdf.setFont(undefined,"bold").text(stage, margin, y); y+=16;
-        pdf.setFont(undefined,"normal");
-        ["Teacher","Student","Point"].forEach(sub => {
-          const key = `${stage} ${sub}`;
-          const txt = `${sub}'s Activity: ${data[key]||""}`;
-          const lines = pdf.splitTextToSize(txt, pdf.internal.pageSize.getWidth()-2*margin);
-          pdf.text(lines, margin+10, y);
-          y += lines.length*14 + 6;
-          if (y>pdf.internal.pageSize.getHeight()-margin){ pdf.addPage(); y=margin; }
-        });
+       "Gender","Average Age","Number in Class"].forEach(k => {
+        pdf.text(`${k}: ${data[k]||""}`, margin, y);
+        y += 18;
+        if (y > pdf.internal.pageSize.getHeight() - margin) { pdf.addPage(); y = margin; }
       });
+
+      // Multi-line
+      const printBlock = (label, key) => {
+        pdf.text(`${label}:`, margin, y); y += 16;
+        pdf.setFontSize(10);
+        const lines = pdf.splitTextToSize(data[key]||"", w);
+        pdf.text(lines, margin, y);
+        y += lines.length * 14 + 10;
+        pdf.setFontSize(12);
+        if (y > pdf.internal.pageSize.getHeight() - margin) { pdf.addPage(); y = margin; }
+      };
+      ["Learning Objectives","Previous Knowledge","Rationale","Aids to Teaching","Reference"].forEach(k => printBlock(k, k));
+
+      // Horizontal rule before Development
+      pdf.setLineWidth(0.5);
+      pdf.line(margin, y, margin + w, y);
+      y += 10;
+
+      // Lesson Development as 3‑col table
+      pdf.setFontSize(14).setFont(undefined,"bold").text("Lesson Development", margin, y);
+      y += 20;
+      pdf.setFontSize(12).setFont(undefined,"normal");
+      const col = w / 3;
+      stages.forEach(stage => {
+        if (y > pdf.internal.pageSize.getHeight() - margin - 60) { pdf.addPage(); y = margin; }
+        pdf.setFont(undefined,"bold").text(stage, margin, y);
+        y += 16;
+        pdf.setFont(undefined,"normal");
+        // Column headers
+        ["Teacher's Activity","Student's Activity","Learning Point"].forEach((hdr,i) => {
+          pdf.text(hdr, margin + i*col, y);
+        });
+        y += 14;
+        // Column content
+        ["Teacher","Student","Point"].forEach((sub,i) => {
+          const key = `${stage} ${sub}`;
+          const lines = pdf.splitTextToSize(data[key]||"", col - 10);
+          pdf.text(lines, margin + i*col, y);
+          // track tallest column
+          if (i === 2) y += lines.length * 14;
+        });
+        y += 10;
+        if (y > pdf.internal.pageSize.getHeight() - margin) { pdf.addPage(); y = margin; }
+      });
+
+      // Assignment
       printBlock("Assignment","Assignment");
 
+      // Page numbers
       const pageCount = pdf.getNumberOfPages();
-      for (let i=1;i<=pageCount;i++){
+      for (let i=1; i<=pageCount; i++){
         pdf.setPage(i)
            .setFontSize(8)
-           .text(`Page ${i} of ${pageCount}`, pdf.internal.pageSize.getWidth()-margin, pdf.internal.pageSize.getHeight()-10, { align:"right" });
+           .text(`Page ${i} of ${pageCount}`, pdf.internal.pageSize.getWidth() - margin, pdf.internal.pageSize.getHeight() - 10, { align:"right" });
       }
 
       pdf.save(`E-LessonPlan_${Date.now()}.pdf`);
       window.location.href = "success.html";
-    }
-
-    function loadFormFromStorage(){
-      const d=localStorage.getItem('lessonPlanData');
-      if(!d) return;
-      const data=JSON.parse(d);
-      for(const k in data){
-        const el=document.querySelector(`[name="${k}"]`);
-        if(el) el.value=data[k];
-      }
     }
   </script>
 </body>
